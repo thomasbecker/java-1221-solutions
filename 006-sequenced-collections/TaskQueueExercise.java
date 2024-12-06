@@ -5,14 +5,14 @@ import java.util.SequencedCollection;
 public class TaskQueueExercise {
 
     record Task(String id, String description, int priority) {
-        @Override
-        public String toString() {
-            return "[%s] %s (Priority: %d)".formatted(
-                    id,
-                    description,
-                    priority
-            );
-        }
+        // @Override
+        // public String toString() {
+        //     return "[%s] %s (Priority: %d)".formatted(
+        //             id,
+        //             description,
+        //             priority
+        //     );
+        // }
     }
 
     static class TaskQueue {

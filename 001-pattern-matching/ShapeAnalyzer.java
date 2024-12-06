@@ -33,7 +33,7 @@ public class ShapeAnalyzer {
             case Circle c -> Math.PI * c.radius() * c.radius();
             case Composite c -> switch (c.operation()) {
                 case "joined" -> calculateArea(c.primary()) + calculateArea(c.secondary());
-                case "overlapped" -> Math.min(
+                case "overlapped" -> Math.max(
                         calculateArea(c.primary()),
                         calculateArea(c.secondary())
                 );
